@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Nature Hills Farmhouse</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
+                <span class="fw-bold">Nature Hills</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">Photo Gallery</h1>
+                    <p class="page-subtitle">Explore the beauty of our farmhouse and surroundings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="filter-buttons">
+                        <button class="btn btn-outline-success active" data-filter="all">All</button>
+                        <button class="btn btn-outline-success" data-filter="exterior">Exterior</button>
+                        <button class="btn btn-outline-success" data-filter="interior">Interior</button>
+                        <button class="btn btn-outline-success" data-filter="garden">Garden</button>
+                        <button class="btn btn-outline-success" data-filter="activities">Activities</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <div class="row g-4" id="gallery-grid">
+                <!-- Exterior Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Exterior/IMG-20250702-WA0004.jpg" data-lightbox="gallery" data-title="Beautiful farmhouse exterior with wraparound porch">
+                            <img src="images/Images/Exterior/IMG-20250702-WA0004.jpg" alt="Farmhouse Exterior" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Exterior/IMG-20250702-WA0005.jpg" data-lightbox="gallery" data-title="Beautiful farmhouse exterior with wraparound porch">
+                            <img src="images/Images/Exterior/IMG-20250702-WA0005.jpg" alt="Farmhouse Exterior" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Exterior/IMG-20250702-WA0006.jpg" data-lightbox="gallery" data-title="Beautiful farmhouse exterior with wraparound porch">
+                            <img src="images/Images/Exterior/IMG-20250702-WA0006.jpg" alt="Farmhouse Exterior" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interior Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Interior/IMG-20250702-WA0002.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
+                            <img src="images/Images/Interior/IMG-20250702-WA0002.jpg" alt="Living Room" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Interior/IMG-20250702-WA0003.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
+                            <img src="images/Images/Interior/IMG-20250702-WA0003.jpg" alt="Living Room" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Interior/IMG-20250702-WA0007.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
+                            <img src="images/Images/Interior/IMG-20250702-WA0007.jpg" alt="Living Room" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Interior/IMG-20250702-WA0008.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
+                            <img src="images/Images/Interior/IMG-20250702-WA0008.jpg" alt="Living Room" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <a href="images/Images/Interior/IMG-20250702-WA00010.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
+                            <img src="images/Images/Interior/IMG-20250702-WA0010.jpg" alt="Living Room" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Garden Photos (placeholder images for now) -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="garden">
+                    <div class="gallery-card">
+                        <a href="images/Images/Garden/IMG-20250702-WA0001.jpg" data-lightbox="gallery" data-title="Organic vegetable garden with fresh produce">
+                            <img src="images/Images/Garden/IMG-20250702-WA0001.jpg" alt="Vegetable Garden" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activities Photos -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="activities">
+                    <div class="gallery-card">
+                        <a href="images/Images/Activities/Act-01.jpg" data-lightbox="gallery" data-title="Guests enjoying farm activities and harvesting">
+                            <img src="images/Images/Activities/Act-01.jpg" alt="Farm Activities" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Experience Our Farm</h2>
+                    <p class="section-subtitle">Watch a virtual tour of our beautiful farmhouse and grounds</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="video-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Farmhouse Tour" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Ready to Experience This Beauty?</h2>
+                    <p class="text-white-50 mb-4">Book your stay and create your own memories at Nature Hills</p>
+                    <a href="contact.html" class="btn btn-light btn-lg">Book Your Stay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Nature Hills Farmhouse. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/7028675662" class="text-muted me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:info@EmailYetToADD.com" class="text-muted"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+
