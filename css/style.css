@@ -48,9 +48,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+h7 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    color: var(--warm-beige);
+}
+
 p {
     color: var(--text-light);
     margin-bottom: 1rem;
+}
+
+quote {
+    font-style: italic;
+    color: var(--text-dark);
+    color: var(--warm-beige);
+
+    border-left: 4px solid var(--primary-green); 
+    padding-left: 1rem;
+    margin: 1.5rem 0;
 }
 
 a {
