@@ -1,9 +1,5 @@
-// ===== MAIN JAVASCRIPT FILE =====
-
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== NAVIGATION SCROLL EFFECT =====
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', function() {
@@ -16,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ===== SMOOTH SCROLLING FOR ANCHOR LINKS =====
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
     anchorLinks.forEach(link => {
@@ -35,16 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== GALLERY FILTER FUNCTIONALITY =====
     const filterButtons = document.querySelectorAll('.filter-buttons .btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
     
     if (filterButtons.length > 0 && galleryItems.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
-                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
                 this.classList.add('active');
                 
                 const filterValue = this.getAttribute('data-filter');
@@ -61,21 +53,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== CONTACT FORM HANDLING =====
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const formData = new FormData(this);
             const firstName = document.getElementById('firstName').value;
             const lastName = document.getElementById('lastName').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Basic validation
             if (!firstName || !lastName || !email || !message) {
                 showNotification('Please fill in all required fields.', 'error');
                 return;
@@ -86,27 +75,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission (replace with actual form handling)
             showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
             this.reset();
         });
     }
 
-    // ===== EMAIL VALIDATION =====
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
 
-    // ===== NOTIFICATION SYSTEM =====
     function showNotification(message, type = 'info') {
-        // Remove existing notifications
         const existingNotification = document.querySelector('.notification');
         if (existingNotification) {
             existingNotification.remove();
         }
         
-        // Create notification element
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.innerHTML = `
@@ -116,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         
-        // Add styles
         notification.style.cssText = `
             position: fixed;
             top: 100px;
@@ -131,17 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
             animation: slideInRight 0.3s ease-out;
         `;
         
-        // Add to page
         document.body.appendChild(notification);
         
-        // Close button functionality
         const closeBtn = notification.querySelector('.notification-close');
         closeBtn.addEventListener('click', () => {
             notification.style.animation = 'slideOutRight 0.3s ease-out';
             setTimeout(() => notification.remove(), 300);
         });
         
-        // Auto remove after 5 seconds
         setTimeout(() => {
             if (notification.parentNode) {
                 notification.style.animation = 'slideOutRight 0.3s ease-out';
@@ -150,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // ===== SCROLL ANIMATIONS =====
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -164,11 +143,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe elements for animation
     const animateElements = document.querySelectorAll('.service-card, .feature-card, .mission-card, .contact-card, .menu-item-card, .gallery-card');
     animateElements.forEach(el => observer.observe(el));
 
-    // ===== LIGHTBOX CONFIGURATION =====
     if (typeof lightbox !== 'undefined') {
         lightbox.option({
             'resizeDuration': 200,
@@ -179,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== HERO SECTION PARALLAX EFFECT =====
     const heroSection = document.querySelector('.hero-section');
     
     if (heroSection) {
@@ -190,7 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== COUNTER ANIMATION =====
     const counters = document.querySelectorAll('.stat-item h3');
     
     counters.forEach(counter => {
@@ -208,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
         
-        // Start animation when element is visible
         const counterObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -221,7 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
         counterObserver.observe(counter);
     });
 
-    // ===== MOBILE MENU CLOSE ON LINK CLICK =====
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     
@@ -234,11 +207,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== FORM ENHANCEMENTS =====
     const formInputs = document.querySelectorAll('.form-control, .form-select');
     
     formInputs.forEach(input => {
-        // Add focus effects
         input.addEventListener('focus', function() {
             this.parentElement.classList.add('focused');
         });
@@ -252,37 +223,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Check if already filled on page load
         if (input.value) {
             input.parentElement.classList.add('filled');
         }
     });
 
-    // ===== DATE INPUT RESTRICTIONS =====
     const checkInDate = document.getElementById('checkIn');
     const checkOutDate = document.getElementById('checkOut');
     
     if (checkInDate && checkOutDate) {
-        // Set minimum date to today
         const today = new Date().toISOString().split('T')[0];
         checkInDate.setAttribute('min', today);
         checkOutDate.setAttribute('min', today);
         
-        // Update checkout minimum when checkin changes
         checkInDate.addEventListener('change', function() {
             const selectedDate = new Date(this.value);
             selectedDate.setDate(selectedDate.getDate() + 1);
             const minCheckout = selectedDate.toISOString().split('T')[0];
             checkOutDate.setAttribute('min', minCheckout);
             
-            // Clear checkout if it's before new minimum
             if (checkOutDate.value && checkOutDate.value <= this.value) {
                 checkOutDate.value = '';
             }
         });
     }
 
-    // ===== BACK TO TOP BUTTON =====
     const backToTopBtn = document.createElement('button');
     backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     backToTopBtn.className = 'back-to-top';
@@ -308,7 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.body.appendChild(backToTopBtn);
     
-    // Show/hide back to top button
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
             backToTopBtn.style.display = 'flex';
@@ -317,7 +281,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Back to top functionality
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -325,7 +288,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Hover effect for back to top button
     backToTopBtn.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-3px)';
         this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.3)';
@@ -336,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
     });
 
-    // ===== LOADING ANIMATION FOR IMAGES =====
     const images = document.querySelectorAll('img');
     
     images.forEach(img => {
@@ -349,12 +310,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== CONSOLE WELCOME MESSAGE =====
-    console.log('%c🌿 Welcome to Nature Hills Farmhouse! 🌿', 'color: #6B8E23; font-size: 16px; font-weight: bold;');
-    console.log('%cEnjoy exploring our beautiful farm website!', 'color: #8FBC8F; font-size: 14px;');
+    // console.log('%c🌿 Welcome to Nature Hills Farmhouse! 🌿', 'color: #6B8E23; font-size: 16px; font-weight: bold;');
+    // console.log('%cEnjoy exploring our beautiful farm website!', 'color: #8FBC8F; font-size: 14px;');
 });
 
-// ===== CSS ANIMATIONS (Added via JavaScript) =====
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideInRight {
@@ -410,4 +369,3 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
-
