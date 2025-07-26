@@ -163,16 +163,24 @@ img {
 }
 
 /* ===== HERO SECTION ===== */
-.hero-section {
+/* .hero-section {
     height: 100vh;
     background: linear-gradient(rgba(47, 79, 47, 0.4), rgba(47, 79, 47, 0.4)),
-    /* background: linear-gradient(rgba(47, 79, 47, 0.4), rgba(255, 255, 255, 0.4)), */
-
-                url('../images/farmhouse-exterior.jpg') center/cover no-repeat;
+    url('../images/farmhouse-ext-resized.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
+} */
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(47, 79, 47, 0.4), rgba(47, 79, 47, 0.4)),
+              url('../images/poster.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
+
 
 .hero-overlay {
     position: absolute;
