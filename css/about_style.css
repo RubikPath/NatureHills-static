@@ -11,5 +11,42 @@
     background: #333;
 }
 
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+}
+
+.carousel-track.animate {
+  animation: scroll-left 500s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.carousel-track img {
+  height: 500px;
+  object-fit: cover;
+  margin-right: 20px; /* 👈 adjust as you like */
+  border-radius: 8px; /* optional for nice corners */
+}
+
+
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
 
 

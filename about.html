@@ -198,16 +198,14 @@
 
     <section class="about-carousel py-5">
         <div class="container">
-            <div class="swiper mySwiper rounded shadow overflow-hidden" style="width: 100%; max-width: 100%; height: 500px;">
-            <div class="swiper-wrapper" id="swiper-wrapper">
+            <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel-track">
                 <!-- Slides will be injected here -->
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
             </div>
         </div>
-    </section>  
+    </section>
+
 
 
 
@@ -449,59 +447,78 @@
 
 
     <script>
-        (async function() {
-            const wrapper = document.getElementById('swiper-wrapper');
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.getElementById('carousel-track');
+
+            async function loadGallery() {
+            let data = {};
+            try {
+                const response = await fetch('gallery.json');
+                if (!response.ok) {
+                console.error(`❌ HTTP error! Status: ${response.status}`);
+                return;
+                }
+                data = await response.json();
+            } catch (err) {
+                console.error('❌ Failed to fetch or parse JSON:', err);
+                return;
+            }
 
             try {
-            const response = await fetch('gallery.json');
+                if (!data || typeof data !== 'object') {
+                throw new Error('Gallery data is not valid.');
+                }
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                const images = [];
+                Object.values(data).forEach(arr => {
+                if (Array.isArray(arr)) {
+                    arr.forEach(path => {
+                    if (typeof path === 'string' && path.trim() !== '') {
+                        images.push(path.trim());
+                    }
+                    });
+                }
+                });
+
+                if (images.length === 0) {
+                throw new Error('No valid images found.');
+                }
+
+                const finalImages = [...images, ...images];
+                const imageElements = [];
+
+                finalImages.forEach(path => {
+                const img = document.createElement('img');
+                img.src = path;
+                img.alt = 'Gallery image';
+                img.onerror = () => {
+                    console.warn(`⚠️ Could not load image: ${path}`);
+                    img.remove();
+                };
+                track.appendChild(img);
+                imageElements.push(img);
+                });
+
+                // Wait until all images are loaded
+                const promises = imageElements.map(img => {
+                return new Promise(resolve => {
+                    if (img.complete) resolve();
+                    else img.onload = resolve;
+                });
+                });
+
+                Promise.all(promises).then(() => {
+                track.classList.add('animate'); // ✅ Only start when ready
+                });
+
+            } catch (err) {
+                console.error('❌ Gallery processing error:', err);
+                track.innerHTML = `<p style="color: red; text-align: center;">Could not load gallery images.</p>`;
+            }
             }
 
-            const text = await response.text();
-            if (!text) {
-                throw new Error('gallery.json is empty.');
-            }
-
-            let data;
-            try {
-                data = JSON.parse(text);
-            } catch (jsonError) {
-                throw new Error('Invalid JSON format in gallery.json.');
-            }
-
-            if (!data || Object.keys(data).length === 0) {
-                throw new Error('No images found in gallery.json.');
-            }
-
-            Object.values(data).flat().forEach(path => {
-                const slide = document.createElement('div');
-                slide.className = 'swiper-slide';
-                slide.innerHTML = `<img src="${path}" alt="Gallery Image" class="w-100 h-100" style="object-fit: cover;">`;
-                wrapper.appendChild(slide);
-            });
-
-            // ✅ Initialize Swiper AFTER slides are injected
-            const swiper = new Swiper('.mySwiper', {
-                loop: true,
-                slidesPerView: 'auto',
-                spaceBetween: 10,
-                autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-                },
-                speed: 5000,
-                freeMode: true,
-                freeModeMomentum: false,
-                grabCursor: true,
-            });
-
-            } catch (error) {
-            console.error('❌ Error loading gallery images:', error.message);
-            wrapper.innerHTML = `<p style="color: red; text-align: center;">Unable to load gallery images. Please try again later.</p>`;
-            }
-        })();
+            loadGallery();
+        });
     </script>
 
 </body>
