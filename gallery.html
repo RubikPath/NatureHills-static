@@ -15,13 +15,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
+    <!-- Floating Call, WhatsApp, and Map Buttons -->
+    <div class="call-buttons-container">
+        <!-- Call Button -->
+        <a class="call-btn-link" href="tel:7028675662" aria-label="Call Lila" id="quick_call_btn">
+            <i class="q-icon material-icons" aria-hidden="true" style="font-size: 24px;">call</i>
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a class="whatsapp-btn-link" href="https://wa.me/7028675662" aria-label="Chat on WhatsApp" id="quick_whatsapp_btn" target="_blank">
+            <i class="q-icon fa-brands fa-whatsapp" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+
+        <!-- Map Direction Button -->
+        <a class="map-btn-link" href="https://maps.app.goo.gl/2ZwLEpKdNpGVp5bD7" aria-label="Get Directions" id="quick_map_btn" target="_blank">
+            <i class="fa fa-map-pin" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
+                <img src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
                 <span class="fw-bold">Nature Hills</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -58,143 +79,34 @@
         </div>
     </section>
 
-    <!-- Gallery Filter -->
+    <!-- Gallery Filter Section -->
     <section class="gallery-filter py-4">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    <div class="filter-buttons">
-                        <button class="btn btn-outline-success active" data-filter="all">All</button>
-                        <button class="btn btn-outline-success" data-filter="exterior">Exterior</button>
-                        <button class="btn btn-outline-success" data-filter="interior">Interior</button>
-                        <button class="btn btn-outline-success" data-filter="garden">Garden</button>
-                        <button class="btn btn-outline-success" data-filter="activities">Activities</button>
-                    </div>
+            <div class="col-12 text-center">
+                <div class="filter-buttons">
+                <button class="btn btn-outline-success" data-filter="all">All</button>
+                <button class="btn btn-outline-success" data-filter="exterior">Exterior</button>
+                <button class="btn btn-outline-success" data-filter="interior">Interior</button>
+                <button class="btn btn-outline-success" data-filter="garden">Garden</button>
+                <button class="btn btn-outline-success active" data-filter="activities">Activities</button>
+                <button class="btn btn-outline-success" data-filter="motley">Motley</button>
+                <button class="btn btn-outline-success" data-filter="scenic">Scenic</button>
                 </div>
+            </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Grid Section -->
     <section class="gallery-section py-5">
         <div class="container">
             <div class="row g-4" id="gallery-grid">
-                <!-- Exterior Photos -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="exterior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Exterior/IMG-20250702-WA0004.jpg" data-lightbox="gallery" data-title="Beautiful farmhouse exterior with wraparound porch">
-                            <img src="images/Images/Exterior/IMG-20250702-WA0004.jpg" alt="Farmhouse Exterior" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="exterior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Exterior/IMG-20250702-WA0005.jpg" data-lightbox="gallery" data-title="Beautiful farmhouse exterior with wraparound porch">
-                            <img src="images/Images/Exterior/IMG-20250702-WA0005.jpg" alt="Farmhouse Exterior" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="exterior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Exterior/IMG-20250702-WA0006.jpg" data-lightbox="gallery" data-title="Beautiful farmhouse exterior with wraparound porch">
-                            <img src="images/Images/Exterior/IMG-20250702-WA0006.jpg" alt="Farmhouse Exterior" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Interior Photos -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Interior/IMG-20250702-WA0002.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
-                            <img src="images/Images/Interior/IMG-20250702-WA0002.jpg" alt="Living Room" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Interior/IMG-20250702-WA0003.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
-                            <img src="images/Images/Interior/IMG-20250702-WA0003.jpg" alt="Living Room" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Interior/IMG-20250702-WA0007.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
-                            <img src="images/Images/Interior/IMG-20250702-WA0007.jpg" alt="Living Room" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Interior/IMG-20250702-WA0008.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
-                            <img src="images/Images/Interior/IMG-20250702-WA0008.jpg" alt="Living Room" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="interior">
-                    <div class="gallery-card">
-                        <a href="images/Images/Interior/IMG-20250702-WA00010.jpg" data-lightbox="gallery" data-title="Cozy farmhouse living room with rustic charm">
-                            <img src="images/Images/Interior/IMG-20250702-WA0010.jpg" alt="Living Room" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Garden Photos (placeholder images for now) -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="garden">
-                    <div class="gallery-card">
-                        <a href="images/Images/Garden/IMG-20250702-WA0001.jpg" data-lightbox="gallery" data-title="Organic vegetable garden with fresh produce">
-                            <img src="images/Images/Garden/IMG-20250702-WA0001.jpg" alt="Vegetable Garden" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Activities Photos -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="activities">
-                    <div class="gallery-card">
-                        <a href="images/Images/Activities/Act-01.jpg" data-lightbox="gallery" data-title="Guests enjoying farm activities and harvesting">
-                            <img src="images/Images/Activities/Act-01.jpg" alt="Farm Activities" class="img-fluid">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-search-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <!-- Items will be injected here -->
             </div>
         </div>
     </section>
+
 
     <!-- Video Section -->
     <section class="video-section py-5 bg-light">
@@ -210,7 +122,7 @@
                     <div class="video-container">
                         <div class="ratio ratio-16x9">
                             <iframe 
-                            	src="https://www.youtube.com/embed/yzyysai5rmY?si=SIDvx-O01DmEQC_8" 
+                            	src="https://www.youtube.com/embed/AvKhy5SlZZw?si=rhX5bPp43GsUSEn6" 
                             	title="Farmhouse Nature Tour" 
                             	frameborder="0" 
                             	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -246,11 +158,11 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">
-                        <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/naturehillspanshet20/" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/people/Nature-Hills-Farms-Panshet-Dam/100084119117165/" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a> -->
                         <a href="https://wa.me/7028675662" class="text-muted me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:info@EmailYetToADD.com" class="text-muted"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:naturehillsfarms@gmail.com" class="text-muted"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -263,5 +175,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+    <script>
+        (async function() {
+            const grid = document.getElementById('gallery-grid');
+
+            try {
+            const response = await fetch('PhotoGallery.json');
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+            const text = await response.text();
+            if (!text) throw new Error('PhotoGallery.json is empty.');
+
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch {
+                throw new Error('Invalid JSON format.');
+            }
+
+            if (!data || Object.keys(data).length === 0) {
+                throw new Error('No images found.');
+            }
+
+            for (const [category, images] of Object.entries(data)) {
+                images.forEach(path => {
+                const filename = path.split('/').pop();
+                const altText = filename.split('.')[0].replace(/[-_]/g, ' ');
+                const filterCategory = category.toLowerCase();
+
+                const card = document.createElement('div');
+                card.className = 'col-lg-4 col-md-6 gallery-item';
+                card.setAttribute('data-category', filterCategory);
+
+                card.innerHTML = `
+                    <div class="gallery-card">
+                    <a href="${path}" data-lightbox="gallery" data-title="${altText}">
+                        <img src="${path}" alt="${altText}" class="img-fluid">
+                        <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+                });
+            }
+
+            console.log('✅ Gallery images loaded.');
+
+            // ✅ ✅ ✅ Now attach the filtering logic:
+            const buttons = document.querySelectorAll('.filter-buttons button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+                const items = document.querySelectorAll('.gallery-item');
+
+                items.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (filterValue === 'all' || itemCategory === filterValue) {
+                    item.style.display = 'block';
+                    } else {
+                    item.style.display = 'none';
+                    }
+                });
+                });
+            });
+
+            } catch (error) {
+            console.error('❌ Gallery load error:', error.message);
+            grid.innerHTML = `<p style="color: red;">Unable to load gallery. Please try again later.</p>`;
+            }
+        })();
+    </script>
+
+
 </body>
 </html>

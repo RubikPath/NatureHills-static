@@ -53,7 +53,8 @@ h7 {
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 1rem;
-    color: var(--warm-beige);
+    /* color: var(--warm-beige); */
+    color: var(--white);
 }
 
 p {
@@ -64,7 +65,9 @@ p {
 quote {
     font-style: italic;
     color: var(--text-dark);
-    color: var(--warm-beige);
+    /* color: var(--warm-beige); */
+    color: var(--white);
+
 
     border-left: 4px solid var(--primary-green); 
     padding-left: 1rem;
@@ -175,7 +178,9 @@ img {
 .hero-section {
   height: 100vh;
   background: linear-gradient(rgba(47, 79, 47, 0.4), rgba(47, 79, 47, 0.4)),
-              url('../images/poster.webp') center/cover no-repeat;
+              /* url('../images/poster.webp') center/cover no-repeat; */
+              url('../images/Index-Cover.webp') center/cover no-repeat;
+
   display: flex;
   align-items: center;
   position: relative;
@@ -859,3 +864,50 @@ html {
     background: var(--text-dark);
 }
 
+
+
+
+/* ----------- */
+.call-buttons-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.call-buttons-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366; /* WhatsApp green for example */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.call-btn-link {
+  background: #34b7f1; /* Call button - blue */
+}
+
+.whatsapp-btn-link {
+  background: #25d366; /* WhatsApp green */
+}
+
+.map-btn-link {
+  background: #f44336; /* Map button - red */
+}
+
+.call-buttons-container a:hover {
+  transform: scale(1.1);
+  background: #000; /* Example hover, change as needed */
+}
+
+.q-icon {
+  font-size: 24px;
+}

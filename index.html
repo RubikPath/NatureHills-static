@@ -15,12 +15,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index_style.css">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <!-- Bootstrap CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> -->
 
 </head>
 <body>
+    <!-- Floating Call, WhatsApp, and Map Buttons -->
+    <div class="call-buttons-container">
+        <!-- Call Button -->
+        <a class="call-btn-link" href="tel:7028675662" aria-label="Call Lila" id="quick_call_btn">
+            <i class="q-icon material-icons" aria-hidden="true" style="font-size: 24px;">call</i>
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a class="whatsapp-btn-link" href="https://wa.me/7028675662" aria-label="Chat on WhatsApp" id="quick_whatsapp_btn" target="_blank">
+            <i class="q-icon fa-brands fa-whatsapp" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+
+        <!-- Map Direction Button -->
+        <a class="map-btn-link" href="https://maps.app.goo.gl/2ZwLEpKdNpGVp5bD7" aria-label="Get Directions" id="quick_map_btn" target="_blank">
+            <i class="fa fa-map-pin" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
@@ -29,7 +50,7 @@
                 <span class="fw-bold">Nature Hills</span>
             </a> -->
             <a class="navbar-brand" href="index.html">
-                <img src="images/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
+                <img src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
                 <span class="fw-bold">Nature Hills</span>
             </a>
 
@@ -79,92 +100,171 @@
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Our Services</h2>
-                    <p class="section-subtitle">Discover the perfect blend of comfort, nature, and authentic farm experiences</p>
+                    <h2 class="section-title">Our Experiences</h2>
+                    <p class="section-subtitle">Unplug, unwind, and reconnect through our curated nature and farm adventures</p>
                 </div>
             </div>
             <div class="row g-4">
+                <!-- Firefly Experience -->
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card h-100">
                         <div class="service-icon">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-bug"></i>
                         </div>
-                        <h4>Staycations</h4>
-                        <p>Unwind in our cozy farmhouse accommodations surrounded by Nature Hills and fresh country air.</p>
+                        <h4>Firefly Nights</h4>
+                        <p>Be mesmerized by the magical glow of fireflies on calm countryside evenings.</p>
                     </div>
                 </div>
+                <!-- Nature Connect -->
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card h-100">
                         <div class="service-icon">
-                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-leaf"></i>
                         </div>
-                        <h4>Overnight Stays</h4>
-                        <p>Experience the magic of farm life with comfortable overnight accommodations and morning farm activities.</p>
+                        <h4>Nature Connect</h4>
+                        <p>Walk barefoot on fresh grass, breathe forest air, and feel one with nature.</p>
                     </div>
                 </div>
+                <!-- Me Time / Family Time -->
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card h-100">
                         <div class="service-icon">
-                            <i class="fas fa-seedling"></i>
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h4>Garden Experiences</h4>
-                        <p>Join us for hands-on gardening activities, harvest fresh produce, and learn sustainable farming practices.</p>
+                        <h4>Family & Me Time</h4>
+                        <p>Find quiet corners for reflection or share laughter with loved ones under open skies.</p>
                     </div>
                 </div>
+                <!-- Digital Detox -->
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card h-100">
                         <div class="service-icon">
-                            <i class="fas fa-utensils"></i>
+                            <i class="fas fa-power-off"></i>
                         </div>
-                        <h4>Farm-Fresh Meals</h4>
-                        <p>Savor delicious homemade breakfast, lunch, and dinner prepared with fresh ingredients from our garden.</p>
+                        <h4>Digital Detox</h4>
+                        <p>Switch off your gadgets and truly tune into nature’s calming rhythm.</p>
+                    </div>
+                </div>
+                <!-- Bonfire Nights -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>Bonfire Nights</h4>
+                        <p>Gather around a crackling bonfire, swap stories, and stargaze the night away.</p>
+                    </div>
+                </div>
+                <!-- Adventure Trails -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h4>Adventure Trails</h4>
+                        <p>Explore hidden trails, trek through green hills, and reconnect with your wild side.</p>
+                    </div>
+                </div>
+                <!-- Outdoor Games -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h4>Outdoor Fun</h4>
+                        <p>Engage in cricket, badminton, and classic outdoor games for all ages.</p>
+                    </div>
+                </div>
+                <!-- Stargazing -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Stargazing</h4>
+                        <p>Lie back under the clear night sky and spot constellations with your loved ones.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <!-- Why Choose Us Section -->
     <section class="why-choose py-5">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Why Choose Nature Hills?</h2>
-                    <p class="section-subtitle">Discover what makes our farmhouse retreat special</p>
-                </div>
+    <div class="container">
+        <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="section-title">Why Choose Nature Hills?</h2>
+            <p class="section-subtitle">More than a stay, a complete, heartfelt experience you’ll treasure</p>
+        </div>
+        </div>
+        <div class="row g-4">
+        <!-- Guest Happiness -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-smile-beam"></i>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-tree"></i>
-                        </div>
-                        <h4>Nature Immersion</h4>
-                        <p>Surrounded by lush gardens, rolling meadows, and peaceful countryside views</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4>Authentic Experience</h4>
-                        <p>Real farm life with hands-on activities and genuine hospitality</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        <h4>Peaceful Retreat</h4>
-                        <p>Escape the hustle and bustle in our tranquil, stress-free environment</p>
-                    </div>
-                </div>
+            <h4>Happy Guests</h4>
+            <p>We go the extra mile to make every guest feel cared for, comfortable, and truly at home.</p>
             </div>
         </div>
+        <!-- Family Bonding -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h4>Bonding Time</h4>
+            <p>Reconnect with loved ones through simple joys, games, bonfires, and nature walks together.</p>
+            </div>
+        </div>
+        <!-- Real Value -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-tags"></i>
+            </div>
+            <h4>True Value</h4>
+            <p>We believe great memories shouldn’t cost a fortune, our all-inclusive experiences deliver more for your stay.</p>
+            </div>
+        </div>
+        <!-- Local Flavors -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h4>Local Taste</h4>
+            <p>Enjoy delicious farm-to-table meals, fresh, organic, and lovingly prepared just for you.</p>
+            </div>
+        </div>
+        <!-- Unique Experiences -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Something Special</h4>
+            <p>From firefly nights to outdoor movie screenings, we offer little surprises that make your stay magical.</p>
+            </div>
+        </div>
+        <!-- Returning Guests -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-redo"></i>
+            </div>
+            <h4>Guests Return</h4>
+            <p>Many of our guests visit again and again, that’s the best sign that we’re doing things right.</p>
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
+
 
     <!-- Resort Activities Section -->
     <section class="activities-section py-5" style="background: #f8f9fa;">
@@ -180,59 +280,152 @@
         <!-- Gallery -->
         <div class="activities-gallery mb-4">
         <div class="gallery-grid">
-            <a href="images/gallery1.jpg" target="_blank">
-            <img src="images/gallery1_thumb.jpg" alt="Activity 1">
+            <a href="images/Activities/1.jpg" target="_blank">
+            <img src="images/Activities/1.jpg" alt="Activity 1">
             </a>
-            <a href="images/gallery2.jpg" target="_blank">
-            <img src="images/gallery2_thumb.jpg" alt="Activity 2">
+            <a href="images/Activities/2.jpeg" target="_blank">
+            <img src="images/Activities/2.jpeg" alt="Activity 2">
             </a>
-            <a href="images/gallery3.jpg" target="_blank">
-            <img src="images/gallery3_thumb.jpg" alt="Activity 3">
+            <a href="images/Activities/3.jpeg" target="_blank">
+            <img src="images/Activities/3.jpeg" alt="Activity 3">
             </a>
-            <a href="images/gallery4.jpg" target="_blank">
-            <img src="images/gallery4_thumb.jpg" alt="Activity 4">
+            <a href="images/Activities/4.jpeg" target="_blank">
+            <img src="images/Activities/4.jpeg" alt="Activity 4">
             </a>
-            <a href="images/gallery5.jpg" target="_blank">
-            <img src="images/gallery5_thumb.jpg" alt="Activity 5">
+            <a href="images/Activities/5.jpeg" target="_blank">
+            <img src="images/Activities/5.jpeg" alt="Activity 5">
+            </a>
+
+
+            <a href="images/Activities/6.jpeg" target="_blank">
+            <img src="images/Activities/6.jpeg" alt="Activity 1">
+            </a>
+            <a href="images/Activities/7.jpeg" target="_blank">
+            <img src="images/Activities/7.jpeg" alt="Activity 2">
+            </a>
+            <a href="images/Activities/8.jpeg" target="_blank">
+            <img src="images/Activities/8.jpeg" alt="Activity 3">
+            </a>
+            <a href="images/Activities/9.jpeg" target="_blank">
+            <img src="images/Activities/9.jpeg" alt="Activity 4">
+            </a>
+            <a href="images/Activities/10.jpeg" target="_blank">
+            <img src="images/Activities/10.jpeg" alt="Activity 5">
+            </a>
+
+
+
+            <a href="images/Activities/11.jpeg" target="_blank">
+            <img src="images/Activities/11.jpeg" alt="Activity 1">
+            </a>
+            <a href="images/Activities/12.jpeg" target="_blank">
+            <img src="images/Activities/12.jpeg" alt="Activity 2">
+            </a>
+            <a href="images/Activities/13.jpeg" target="_blank">
+            <img src="images/Activities/13.jpeg" alt="Activity 3">
+            </a>
+            <a href="images/Activities/14.jpeg" target="_blank">
+            <img src="images/Activities/14.jpeg" alt="Activity 4">
+            </a>
+            <a href="images/Activities/15.jpeg" target="_blank">
+            <img src="images/Activities/15.jpeg" alt="Activity 5">
+            </a>
+
+
+
+            <a href="images/Activities/16.jpeg" target="_blank">
+            <img src="images/Activities/16.jpeg" alt="Activity 1">
+            </a>
+            <a href="images/Activities/17.jpeg" target="_blank">
+            <img src="images/Activities/17.jpeg" alt="Activity 2">
             </a>
         </div>
         </div>
 
         <!-- Counter and Text -->
         <div class="activities-counter mb-4">
-        <h3 style="font-size: 48px; font-weight: bold; margin-bottom: 0;">75+</h3>
+        <h3 style="font-size: 48px; font-weight: bold; margin-bottom: 0;">25+</h3>
         <p style="margin: 0; font-weight: 500;">Activities</p>
         </div>
 
         <!-- Description -->
         <p class="lead mb-3">
-        Getaways are worth only if they're filled with three things—fun, fun, and more fun! 
-        At Nature Hills Farms, we deliver it with over 75+ thrilling, relaxing, and adventurous activities.
+        Getaways are truly special when they’re packed with one thing, endless fun! At Nature Hills Farms, we bring this promise to life with over 25+ exciting, relaxing, and adventure-filled activities. 
+        From heart-racing outdoor games to tranquil nature trails and cozy bonfire nights under the stars, there’s something here for every age and every mood. 
+        Whether you’re planning a family escape, a friends’ reunion, or a corporate day-out, Nature Hills Farms makes sure you’re never short of things to enjoy.
         </p>
-        <p class="mb-4">
-        From adrenaline-pumping games to peaceful nature walks, poolside fun to bonfire nights —
+        <!-- <p class="mb-4">
+        From adrenaline-pumping games to peaceful nature walks, poolside fun to bonfire nights, 
         there’s something for every age and mood. Whether it’s a family weekend or a corporate day-out,
         you’ll never run out of things to do.
-        </p>
+        </p> -->
 
         <!-- Icon List -->
         <div class="row mb-4">
-        <div class="col-md-6">
-            <ul class="list-unstyled text-start">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Adventure Activities</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Water Activities</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <ul class="list-unstyled text-start">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Indoor Games</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Outdoor Games</li>
-            </ul>
-        </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check-circle text-success me-2"></i>Adventure Activities</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Board Games Zone</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Team Challenges</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Trekking Trails</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Camping & Tent Stay Experiences</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Barbecue Nights with Family & Friends</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Yoga & Meditation Corners</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Pet-Friendly Play Area</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Karaoke</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Archery</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Volleyball</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Cricket</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Bird watching [with Binocular]</li>
+                
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check-circle text-success me-2"></i>Bonfire Evenings Under the Stars</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Nature Walks</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Kids’ Play Zone</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Music Nights</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Photography Walks</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Firefly Night Walks</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Badminton</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Carrom</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Chess</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Ludo</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Lawn</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Play cards</li>
+                
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="list-unstyled text-start">
+                
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled text-start">
+                
+                </ul>
+            </div>
+
+
+            <div class="col-md-6">
+                <ul class="list-unstyled text-start">
+                
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled text-start">
+                
+                </ul>
+            </div>
+
+
         </div>
 
         <!-- CTA Button -->
-        <a href="/activities" class="btn btn-success btn-lg">
+        <a href="contact.html" class="btn btn-success btn-lg">
         Click here to know more
         </a>
     </div>
@@ -255,7 +448,7 @@
                     <!-- Review Card Example -->
                     <div class="review-card">
                     <div class="review-header">
-                        <img src="images/Images/Google-Reviews-Users/All-Users/Ravi-Vasantrao.png" alt="User" class="review-avatar">
+                        <img src="images/Google-Reviews-Users/All-Users/Ravi-Vasantrao.png" alt="User" class="review-avatar">
                         <div>
                         <strong>Ravi Vasantrao</strong><br>
                         <small>2 weeks ago</small>
@@ -277,7 +470,7 @@
                     <!-- More reviews -->
                     <div class="review-card">
                     <div class="review-header">
-                        <img src="images/Images/Google-Reviews-Users/All-Users/swapnali-kumbhare.png" alt="User" class="review-avatar">
+                        <img src="images/Google-Reviews-Users/All-Users/swapnali-kumbhare.png" alt="User" class="review-avatar">
                         <div>
                         <strong>Swapnali Kumbhare</strong><br>
                         <small>5 month ago</small>
@@ -301,7 +494,7 @@
                     <!-- Add more reviews -->
                     <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Shweta-Shinde.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Shweta-Shinde.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Shweta Shinde</strong><br>
                             <small>3 weeks ago</small>
@@ -315,7 +508,7 @@
                             <i class="fas fa-star text-warning"></i>
                         </div>
                         <p class="review-text">We had a wonderful stay at this hillside farm house. The hosts were incredibly warm and accommodating, making us feel right at home. 
-                            The food was delicious and freshly prepared, adding to the overall comfort of the experience. One of the best parts was the complete peace and quiet — no disturbances at all. And of course, the scenic beauty surrounding the property was absolutely breathtaking. 
+                            The food was delicious and freshly prepared, adding to the overall comfort of the experience. One of the best parts was the complete peace and quiet, no disturbances at all. And of course, the scenic beauty surrounding the property was absolutely breathtaking. 
                             A perfect spot to relax and unwind. Highly recommended!
                         </p>
                         <a href="https://share.google/TYlcHrnBxXmx6TVYx" target="_blank" class="btn btn-sm btn-outline-primary">
@@ -327,7 +520,7 @@
                     
                     <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Sheetal-Kale.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Sheetal-Kale.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Sheetal Kale</strong><br>
                             <small>3 weeks ago</small>
@@ -351,7 +544,7 @@
 
                      <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Anvesha2104-92.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Anvesha2104-92.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Anvesha2104 92</strong><br>
                             <small>a year ago</small>
@@ -377,7 +570,7 @@
 
                      <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/akshay-mahadik.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/akshay-mahadik.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Akshay Mahadik</strong><br>
                             <small>6 months ago</small>
@@ -403,7 +596,7 @@
 
                      <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Vinod-Nagulkar.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Vinod-Nagulkar.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Vinod Nagulkar</strong><br>
                             <small>a year ago</small>
@@ -429,7 +622,7 @@
 
                      <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Mayur-Kachare.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Mayur-Kachare.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Mayur Kachare</strong><br>
                             <small>a year ago</small>
@@ -463,7 +656,7 @@
 
                     <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Mrudula07.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Mrudula07.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Mrudula</strong><br>
                             <small>a year ago</small>
@@ -492,7 +685,7 @@
                     
                     <div class="review-card">
                         <div class="review-header">
-                            <img src="images/Images/Google-Reviews-Users/All-Users/Tanmay.png" alt="User" class="review-avatar">
+                            <img src="images/Google-Reviews-Users/All-Users/Tanmay.png" alt="User" class="review-avatar">
                             <div>
                             <strong>Tanmay</strong><br>
                             <small>2 years ago</small>
@@ -717,6 +910,8 @@
         </div>
     </section>
 
+    
+
     <!-- Footer -->
     <footer class="footer py-4">
         <div class="container">
@@ -726,11 +921,11 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">
-                        <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/naturehillspanshet20/" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/people/Nature-Hills-Farms-Panshet-Dam/100084119117165/" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a> -->
                         <a href="https://wa.me/7028675662" class="text-muted me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:info@EmailYetToADD.com" class="text-muted"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:naturehillsfarms@gmail.com" class="text-muted"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>

@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -26,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
+                <img src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
                 <span class="fw-bold">Nature Hills</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -78,7 +76,7 @@
             <div id="carousel-videos" class="w-100 h-100 position-relative">
             <iframe
                 class="carousel-video position-absolute w-100 h-100"
-                src="https://www.youtube.com/embed/VIDEO_ID_1?enablejsapi=1&autoplay=1"
+                src="https://www.youtube.com/embed/AvKhy5SlZZw?si=rhX5bPp43GsUSEn6"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
@@ -87,7 +85,7 @@
 
             <iframe
                 class="carousel-video position-absolute w-100 h-100"
-                src="https://www.youtube.com/embed/VIDEO_ID_2?enablejsapi=1"
+                src="https://www.youtube.com/embed/gM-6v8XhkAg?si=decwi73zadhA7QZe"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
@@ -96,12 +94,22 @@
 
             <iframe
                 class="carousel-video position-absolute w-100 h-100"
-                src="https://www.youtube.com/embed/VIDEO_ID_3?enablejsapi=1"
+                src="https://www.youtube.com/embed/ehsNTfLpuIA?si=vUj9vJxZL0tNmfYD"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
                 style="display: none;"
             ></iframe>
+
+            <iframe
+                class="carousel-video position-absolute w-100 h-100"
+                src="https://www.youtube.com/embed/Ep9_zp3zK1c?si=zhrFPR89Ywm_D2ZO"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="display: none;"
+            ></iframe>
+
             <!-- Add more if needed -->
             </div>
 
@@ -115,7 +123,8 @@
             <span class="dot active-dot mx-1"></span>
             <span class="dot mx-1"></span>
             <span class="dot mx-1"></span>
-            </div>
+            <span class="dot mx-1"></span>
+        </div>
         </div>
         </div>
 
@@ -164,12 +173,10 @@
     </section>
 
     <!-- Image Carousel Section -->
-    <section class="about-carousel py-5">
+    <!-- <section class="about-carousel py-5">
     <div class="container">
-        <!-- <h2 class="section-title mb-4">Our Gallery</h2> -->
         <div class="swiper mySwiper rounded shadow overflow-hidden" style="width: 100%; max-width: 100%; height: 500px;">
         <div class="swiper-wrapper">
-            <!-- Slides -->
             <div class="swiper-slide">
             <img src="images/farmhouse-white.jpg" alt="Farmhouse 1" class="w-100 h-100" style="object-fit: cover;">
             </div>
@@ -179,18 +186,28 @@
             <div class="swiper-slide">
             <img src="images/farmhouse3.jpg" alt="Farmhouse 3" class="w-100 h-100" style="object-fit: cover;">
             </div>
-            <!-- Add more slides -->
         </div>
 
-        <!-- Pagination Dots -->
         <div class="swiper-pagination"></div>
 
-        <!-- Navigation Buttons (optional) -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
         </div>
     </div>
-    </section>
+    </section> -->
+
+    <section class="about-carousel py-5">
+        <div class="container">
+            <div class="swiper mySwiper rounded shadow overflow-hidden" style="width: 100%; max-width: 100%; height: 500px;">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Slides will be injected here -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>  
 
 
 
@@ -291,172 +308,20 @@
     <!-- Floating Call, WhatsApp, and Map Buttons -->
     <div class="call-buttons-container">
     <!-- Call Button -->
-    <a class="call-btn-link" href="tel:04045210121" aria-label="Call Hyderabad" id="quick_call_btn">
+    <a class="call-btn-link" href="tel:7028675662" aria-label="Call Lila" id="quick_call_btn">
         <i class="q-icon material-icons" aria-hidden="true" style="font-size: 24px;">call</i>
     </a>
 
     <!-- WhatsApp Button -->
-    <a class="whatsapp-btn-link" href="https://wa.me/911140846393?text=Hi%2C%20I%20need%20Physiotherapy%20Service%20in%20Hyderabad" aria-label="Chat on WhatsApp" id="quick_whatsapp_btn" target="_blank">
+    <a class="whatsapp-btn-link" href="https://wa.me/7028675662" aria-label="Chat on WhatsApp" id="quick_whatsapp_btn" target="_blank">
         <i class="q-icon fa-brands fa-whatsapp" aria-hidden="true" style="font-size: 24px;"></i>
     </a>
 
     <!-- Map Direction Button -->
-    <a class="map-btn-link" href="https://www.google.com/maps/dir/?api=1&destination=Your+Location+Name+Here" aria-label="Get Directions" id="quick_map_btn" target="_blank">
+    <a class="map-btn-link" href="https://maps.app.goo.gl/2ZwLEpKdNpGVp5bD7" aria-label="Get Directions" id="quick_map_btn" target="_blank">
         <i class="fa fa-map-pin" aria-hidden="true" style="font-size: 24px;"></i>
     </a>
     </div>
-
-
-    <!-- Menu Section
-    <section id="menu" class="menu-section py-5">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Our Farm-to-Table Menu</h2>
-                    <p class="section-subtitle">Fresh, organic, and lovingly prepared meals using ingredients from our garden</p>
-                </div>
-            </div>
-            
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="menu-category">
-                        <h3 class="menu-category-title">
-                            <i class="fas fa-sun text-warning me-2"></i>Breakfast (7:00 AM - 10:00 AM)
-                        </h3>
-                        <div class="row g-4">
-                            <div class="col-lg-6">
-                                <div class="menu-item-card">
-                                    <h5>Farm Fresh Eggs Benedict</h5>
-                                    <p class="text-muted">Free-range eggs on homemade English muffins with hollandaise sauce</p>
-                                    <span class="price">$14</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Organic Pancakes</h5>
-                                    <p class="text-muted">Fluffy pancakes with maple syrup and seasonal berries</p>
-                                    <span class="price">$12</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Garden Vegetable Omelet</h5>
-                                    <p class="text-muted">Three-egg omelet with fresh herbs and vegetables from our garden</p>
-                                    <span class="price">$13</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="menu-item-card">
-                                    <h5>Homemade Granola Bowl</h5>
-                                    <p class="text-muted">House-made granola with yogurt, honey, and fresh fruit</p>
-                                    <span class="price">$10</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Avocado Toast</h5>
-                                    <p class="text-muted">Artisan bread with smashed avocado, tomatoes, and microgreens</p>
-                                    <span class="price">$11</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Farm Breakfast Platter</h5>
-                                    <p class="text-muted">Eggs, bacon, sausage, hash browns, and toast</p>
-                                    <span class="price">$16</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="menu-category">
-                        <h3 class="menu-category-title">
-                            <i class="fas fa-cloud-sun text-info me-2"></i>Lunch (12:00 PM - 3:00 PM)
-                        </h3>
-                        <div class="row g-4">
-                            <div class="col-lg-6">
-                                <div class="menu-item-card">
-                                    <h5>Garden Harvest Salad</h5>
-                                    <p class="text-muted">Mixed greens, seasonal vegetables, and herb vinaigrette</p>
-                                    <span class="price">$15</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Farmhouse Soup & Sandwich</h5>
-                                    <p class="text-muted">Daily soup with grilled cheese on homemade bread</p>
-                                    <span class="price">$13</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Grilled Chicken Wrap</h5>
-                                    <p class="text-muted">Free-range chicken with vegetables in a whole wheat tortilla</p>
-                                    <span class="price">$14</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="menu-item-card">
-                                    <h5>Quinoa Power Bowl</h5>
-                                    <p class="text-muted">Quinoa with roasted vegetables, chickpeas, and tahini dressing</p>
-                                    <span class="price">$16</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Farm Burger</h5>
-                                    <p class="text-muted">Grass-fed beef with lettuce, tomato, and sweet potato fries</p>
-                                    <span class="price">$17</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Seasonal Pasta</h5>
-                                    <p class="text-muted">Fresh pasta with seasonal vegetables and herbs</p>
-                                    <span class="price">$18</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="menu-category">
-                        <h3 class="menu-category-title">
-                            <i class="fas fa-moon text-primary me-2"></i>Dinner (6:00 PM - 9:00 PM)
-                        </h3>
-                        <div class="row g-4">
-                            <div class="col-lg-6">
-                                <div class="menu-item-card">
-                                    <h5>Herb-Crusted Salmon</h5>
-                                    <p class="text-muted">Fresh salmon with garden herbs and roasted vegetables</p>
-                                    <span class="price">$24</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Farm-Raised Chicken</h5>
-                                    <p class="text-muted">Roasted chicken with seasonal vegetables and mashed potatoes</p>
-                                    <span class="price">$22</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Vegetarian Risotto</h5>
-                                    <p class="text-muted">Creamy risotto with mushrooms and fresh herbs</p>
-                                    <span class="price">$20</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="menu-item-card">
-                                    <h5>Grass-Fed Steak</h5>
-                                    <p class="text-muted">Grilled steak with garlic mashed potatoes and green beans</p>
-                                    <span class="price">$28</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Stuffed Bell Peppers</h5>
-                                    <p class="text-muted">Bell peppers stuffed with quinoa, vegetables, and cheese</p>
-                                    <span class="price">$19</span>
-                                </div>
-                                <div class="menu-item-card">
-                                    <h5>Chef's Special</h5>
-                                    <p class="text-muted">Daily special featuring seasonal ingredients (ask your server)</p>
-                                    <span class="price">Market Price</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Footer -->
     <footer class="footer py-4">
@@ -467,11 +332,11 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">
-                        <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/naturehillspanshet20/" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/people/Nature-Hills-Farms-Panshet-Dam/100084119117165/" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a> -->
                         <a href="https://wa.me/7028675662" class="text-muted me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:info@EmailYetToADD.com" class="text-muted"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:naturehillsfarms@gmail.com" class="text-muted"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -583,6 +448,61 @@
     </script>
 
 
+    <script>
+        (async function() {
+            const wrapper = document.getElementById('swiper-wrapper');
+
+            try {
+            const response = await fetch('gallery.json');
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const text = await response.text();
+            if (!text) {
+                throw new Error('gallery.json is empty.');
+            }
+
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch (jsonError) {
+                throw new Error('Invalid JSON format in gallery.json.');
+            }
+
+            if (!data || Object.keys(data).length === 0) {
+                throw new Error('No images found in gallery.json.');
+            }
+
+            Object.values(data).flat().forEach(path => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `<img src="${path}" alt="Gallery Image" class="w-100 h-100" style="object-fit: cover;">`;
+                wrapper.appendChild(slide);
+            });
+
+            // ✅ Initialize Swiper AFTER slides are injected
+            const swiper = new Swiper('.mySwiper', {
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                },
+                speed: 5000,
+                freeMode: true,
+                freeModeMomentum: false,
+                grabCursor: true,
+            });
+
+            } catch (error) {
+            console.error('❌ Error loading gallery images:', error.message);
+            wrapper.innerHTML = `<p style="color: red; text-align: center;">Unable to load gallery images. Please try again later.</p>`;
+            }
+        })();
+    </script>
 
 </body>
 </html>
