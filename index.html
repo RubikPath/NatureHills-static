@@ -43,228 +43,173 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top flex-column">
+        <!-- Top Info Bar ABOVE container -->
+        <div class="w-100 top-info-bar text-center mb-3">
+            For booking and enquiry call us on
+            <a href="tel:+917028675662">+91 7028675662</a>
+        </div>
+
+        <!-- Main Nav Container -->
         <div class="container">
-            <!-- <a class="navbar-brand" href="index.html">
-                <i class="fas fa-leaf text-success me-2"></i>
-                <span class="fw-bold">Nature Hills</span>
-            </a> -->
             <a class="navbar-brand" href="index.html">
-                <img src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
-                <span class="fw-bold">Nature Hills</span>
+            <img src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
+            <span class="fw-bold">Nature Hills</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
             </div>
         </div>
     </nav>
 
+
+
     <!-- Hero Section -->
     <section class="hero-section">
+        <!-- Two background layers -->
+        <div class="hero-bg hero-bg-1"></div>
+        <div class="hero-bg hero-bg-2"></div>
+
+        <!-- Overlay stays for dark tint -->
         <div class="hero-overlay"></div>
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-lg-8 mx-auto text-center text-white">
-                    <h7 class="display-3 fw-bold mb-4">Welcome to Nature Hills</h7>
-                    </br>
-                    <quote class="lead mb-5">Escape to nature's embrace. Experience tranquil staycations, garden adventures, and farm-fresh meals in our serene countryside retreat.</quote>
-                    </br></br>
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary btn-lg me-3">Book Your Stay</a>
-                        <a href="gallery.html" class="btn btn-outline-light btn-lg">View Gallery</a>
-                    </div>
+
+        <!-- Content stays the same -->
+        <div class="container hero-content">
+            <div class="row">
+            <div class="col-lg-8 mx-auto text-center text-white">
+                <h1 class="display-3 fw-bold mb-4">Welcome to Nature Hills</h1>
+                <p class="lead mb-4">
+                Escape to nature's embrace. Experience tranquil staycations, garden adventures, and farm-fresh meals.
+                </p>
+                <div class="hero-buttons mb-4">
+                <a href="contact.html" class="btn btn-primary btn-lg me-3">Book Your Stay</a>
+                <a href="gallery.html" class="btn btn-outline-light btn-lg">View Gallery</a>
                 </div>
+            </div>
             </div>
         </div>
     </section>
+
+
+
 
     <!-- Services Section -->
     <section class="services-section py-5">
         <div class="container">
             <div class="row text-center mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Our Experiences</h2>
-                    <p class="section-subtitle">Unplug, unwind, and reconnect through our curated nature and farm adventures</p>
-                </div>
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-title">Our Experiences</h2>
+                <p class="section-subtitle">Unplug, unwind, and reconnect through our curated nature and farm adventures</p>
+            </div>
             </div>
             <div class="row g-4">
-                <!-- Firefly Experience -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <h4>Firefly Nights</h4>
-                        <p>Be mesmerized by the magical glow of fireflies on calm countryside evenings.</p>
-                    </div>
+            <!-- Firefly Experience -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-bug"></i>
                 </div>
-                <!-- Nature Connect -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <h4>Nature Connect</h4>
-                        <p>Walk barefoot on fresh grass, breathe forest air, and feel one with nature.</p>
-                    </div>
+                <h4>Firefly Nights</h4>
+                <p>Be mesmerized by the magical glow of fireflies on calm countryside evenings.</p>
                 </div>
-                <!-- Me Time / Family Time -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Family & Me Time</h4>
-                        <p>Find quiet corners for reflection or share laughter with loved ones under open skies.</p>
-                    </div>
+            </div>
+
+            <!-- Nature Connect -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-leaf"></i>
                 </div>
-                <!-- Digital Detox -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-power-off"></i>
-                        </div>
-                        <h4>Digital Detox</h4>
-                        <p>Switch off your gadgets and truly tune into nature’s calming rhythm.</p>
-                    </div>
+                <h4>Nature Connect</h4>
+                <p>Walk barefoot on fresh grass, breathe forest air, and feel one with nature.</p>
                 </div>
-                <!-- Bonfire Nights -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <h4>Bonfire Nights</h4>
-                        <p>Gather around a crackling bonfire, swap stories, and stargaze the night away.</p>
-                    </div>
+            </div>
+
+            <!-- Family & Me Time -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
                 </div>
-                <!-- Adventure Trails -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-hiking"></i>
-                        </div>
-                        <h4>Adventure Trails</h4>
-                        <p>Explore hidden trails, trek through green hills, and reconnect with your wild side.</p>
-                    </div>
+                <h4>Family & Me Time</h4>
+                <p>Find quiet corners for reflection or share laughter with loved ones under open skies.</p>
                 </div>
-                <!-- Outdoor Games -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-futbol"></i>
-                        </div>
-                        <h4>Outdoor Fun</h4>
-                        <p>Engage in cricket, badminton, and classic outdoor games for all ages.</p>
-                    </div>
+            </div>
+
+            <!-- Digital Detox -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-power-off"></i>
                 </div>
-                <!-- Stargazing -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>Stargazing</h4>
-                        <p>Lie back under the clear night sky and spot constellations with your loved ones.</p>
-                    </div>
+                <h4>Digital Detox</h4>
+                <p>Switch off your gadgets and truly tune into nature’s calming rhythm.</p>
                 </div>
+            </div>
+
+            <!-- Bonfire Nights -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h4>Bonfire Nights</h4>
+                <p>Gather around a crackling bonfire, swap stories, and stargaze the night away.</p>
+                </div>
+            </div>
+
+            <!-- Adventure Trails -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-hiking"></i>
+                </div>
+                <h4>Adventure Trails</h4>
+                <p>Explore hidden trails, trek through green hills, and reconnect with your wild side.</p>
+                </div>
+            </div>
+
+            <!-- Outdoor Fun -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <h4>Outdoor Fun</h4>
+                <p>Engage in cricket, badminton, and classic outdoor games for all ages.</p>
+                </div>
+            </div>
+
+            <!-- Stargazing -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Stargazing</h4>
+                <p>Lie back under the clear night sky and spot constellations with your loved ones.</p>
+                </div>
+            </div>
             </div>
         </div>
     </section>
-
-
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose py-5">
-    <div class="container">
-        <div class="row text-center mb-5">
-        <div class="col-lg-8 mx-auto">
-            <h2 class="section-title">Why Choose Nature Hills?</h2>
-            <p class="section-subtitle">More than a stay, a complete, heartfelt experience you’ll treasure</p>
-        </div>
-        </div>
-        <div class="row g-4">
-        <!-- Guest Happiness -->
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-card text-center">
-            <div class="feature-icon">
-                <i class="fas fa-smile-beam"></i>
-            </div>
-            <h4>Happy Guests</h4>
-            <p>We go the extra mile to make every guest feel cared for, comfortable, and truly at home.</p>
-            </div>
-        </div>
-        <!-- Family Bonding -->
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-card text-center">
-            <div class="feature-icon">
-                <i class="fas fa-users"></i>
-            </div>
-            <h4>Bonding Time</h4>
-            <p>Reconnect with loved ones through simple joys, games, bonfires, and nature walks together.</p>
-            </div>
-        </div>
-        <!-- Real Value -->
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-card text-center">
-            <div class="feature-icon">
-                <i class="fas fa-tags"></i>
-            </div>
-            <h4>True Value</h4>
-            <p>We believe great memories shouldn’t cost a fortune, our all-inclusive experiences deliver more for your stay.</p>
-            </div>
-        </div>
-        <!-- Local Flavors -->
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-card text-center">
-            <div class="feature-icon">
-                <i class="fas fa-utensils"></i>
-            </div>
-            <h4>Local Taste</h4>
-            <p>Enjoy delicious farm-to-table meals, fresh, organic, and lovingly prepared just for you.</p>
-            </div>
-        </div>
-        <!-- Unique Experiences -->
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-card text-center">
-            <div class="feature-icon">
-                <i class="fas fa-star"></i>
-            </div>
-            <h4>Something Special</h4>
-            <p>From firefly nights to outdoor movie screenings, we offer little surprises that make your stay magical.</p>
-            </div>
-        </div>
-        <!-- Returning Guests -->
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-card text-center">
-            <div class="feature-icon">
-                <i class="fas fa-redo"></i>
-            </div>
-            <h4>Guests Return</h4>
-            <p>Many of our guests visit again and again, that’s the best sign that we’re doing things right.</p>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-
 
     <!-- Resort Activities Section -->
     <section class="activities-section py-5" style="background: #f8f9fa;">
@@ -371,7 +316,6 @@
                 <li><i class="fas fa-check-circle text-success me-2"></i>Camping & Tent Stay Experiences</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Barbecue Nights with Family & Friends</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Yoga & Meditation Corners</li>
-                <li><i class="fas fa-check-circle text-success me-2"></i>Pet-Friendly Play Area</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Karaoke</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Archery</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Volleyball</li>
@@ -385,7 +329,6 @@
                 <li><i class="fas fa-check-circle text-success me-2"></i>Bonfire Evenings Under the Stars</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Nature Walks</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Kids’ Play Zone</li>
-                <li><i class="fas fa-check-circle text-success me-2"></i>Music Nights</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Photography Walks</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Firefly Night Walks</li>
                 <li><i class="fas fa-check-circle text-success me-2"></i>Badminton</li>
@@ -760,7 +703,6 @@
         </div>
     </div>
     </section>
-
         <!-- Modal Popup for All Amenities -->
         <div class="modal fade" id="amenitiesModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -896,6 +838,80 @@
 
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section class="why-choose py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="section-title">Why Choose Nature Hills?</h2>
+            <p class="section-subtitle">More than a stay, a complete, heartfelt experience you’ll treasure</p>
+        </div>
+        </div>
+        <div class="row g-4">
+        <!-- Guest Happiness -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-smile-beam"></i>
+            </div>
+            <h4>Happy Guests</h4>
+            <p>We go the extra mile to make every guest feel cared for, comfortable, and truly at home.</p>
+            </div>
+        </div>
+        <!-- Family Bonding -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h4>Bonding Time</h4>
+            <p>Reconnect with loved ones through simple joys, games, bonfires, and nature walks together.</p>
+            </div>
+        </div>
+        <!-- Real Value -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-tags"></i>
+            </div>
+            <h4>True Value</h4>
+            <p>We believe great memories shouldn’t cost a fortune, our all-inclusive experiences deliver more for your stay.</p>
+            </div>
+        </div>
+        <!-- Local Flavors -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h4>Local Taste</h4>
+            <p>Enjoy delicious farm-to-table meals, fresh, organic, and lovingly prepared just for you.</p>
+            </div>
+        </div>
+        <!-- Unique Experiences -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Something Special</h4>
+            <p>From firefly nights to outdoor movie screenings, we offer little surprises that make your stay magical.</p>
+            </div>
+        </div>
+        <!-- Returning Guests -->
+        <div class="col-lg-4 col-md-6">
+            <div class="feature-card text-center">
+            <div class="feature-icon">
+                <i class="fas fa-redo"></i>
+            </div>
+            <h4>Guests Return</h4>
+            <p>Many of our guests visit again and again, that’s the best sign that we’re doing things right.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
 
     <!-- Call to Action -->
     <section class="cta-section py-5">
@@ -915,22 +931,57 @@
     <!-- Footer -->
     <footer class="footer py-4">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 Nature Hills Farmhouse. All rights reserved.</p>
+            <div class="row justify-content-center text-center">
+            <!-- Contact Info Row -->
+            <div class="col-12">
+                <div class="row">
+                <!-- Phone -->
+                <div class="col-12 col-md-4 col-lg mb-3 mb-md-0">
+                    <a href="tel:+917028675662" class="footer-contact-link">
+                    <i class="fas fa-phone-alt"></i> +91 7028675662
+                    </a>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/naturehillspanshet20/" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/people/Nature-Hills-Farms-Panshet-Dam/100084119117165/" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
-                        <!-- <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://wa.me/7028675662" class="text-muted me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:naturehillsfarms@gmail.com" class="text-muted"><i class="fas fa-envelope"></i></a>
-                    </div>
+
+                <!-- Instagram -->
+                <div class="col-12 col-md-4 col-lg mb-3 mb-md-0">
+                    <a href="https://www.instagram.com/naturehillspanshet20/" class="footer-contact-link">
+                    <i class="fab fa-instagram"></i> naturehillspanshet20
+                    </a>
                 </div>
+
+                <!-- Facebook -->
+                <div class="col-12 col-md-4 col-lg mb-3 mb-md-0">
+                    <a href="https://www.facebook.com/people/Nature-Hills-Farms-Panshet-Dam/100084119117165/" class="footer-contact-link">
+                    <i class="fab fa-facebook-f"></i> Nature Hills Farms
+                    </a>
+                </div>
+
+                <!-- Email -->
+                <div class="col-12 col-md-4 col-lg mb-3 mb-md-0">
+                    <a href="mailto:naturehillsfarms@gmail.com" class="footer-contact-link">
+                    <i class="fas fa-envelope"></i> naturehillsfarms@gmail.com
+                    </a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="col-12 col-md-4 col-lg mb-3 mb-md-0">
+                    <a href="https://wa.me/7028675662" class="footer-contact-link">
+                    <i class="fab fa-whatsapp"></i> +91 7028675662
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-12 text-center mt-4">
+                <p class="mb-0">&copy; 2025 Nature Hills Farmhouse. All rights reserved.</p>
+            </div>
             </div>
         </div>
     </footer>
+
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -939,12 +990,66 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <script src="js/global_script.js"></script>
     <script>
     document.getElementById('openAmenitiesBtn').addEventListener('click', function () {
         var amenitiesModal = new bootstrap.Modal(document.getElementById('amenitiesModal'));
         amenitiesModal.show();
     });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const bg1 = document.querySelector('.hero-bg-1');
+            const bg2 = document.querySelector('.hero-bg-2');
+
+            try {
+            const response = await fetch('hero-images.json');
+            if (!response.ok) {
+                console.error('Failed to load JSON');
+                return;
+            }
+
+            const data = await response.json();
+            const images = data.images;
+
+            if (!Array.isArray(images) || images.length === 0) {
+                console.error('No images found in JSON.');
+                return;
+            }
+
+            let index = 0;
+            let isBg1Active = true;
+
+            // Initial images
+            bg1.style.backgroundImage = `url('${images[0]}')`;
+            bg1.classList.add('active');
+
+            setInterval(() => {
+                index = (index + 1) % images.length;
+
+                if (isBg1Active) {
+                bg2.style.backgroundImage = `url('${images[index]}')`;
+                bg2.classList.add('active');
+                bg1.classList.remove('active');
+                } else {
+                bg1.style.backgroundImage = `url('${images[index]}')`;
+                bg1.classList.add('active');
+                bg2.classList.remove('active');
+                }
+
+                isBg1Active = !isBg1Active;
+            }, 3000);
+
+            } catch (error) {
+            console.error('Error loading hero images:', error);
+            }
+        });
+    </script>
+
+
+
+
 
 </body>
 </html>

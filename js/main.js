@@ -156,15 +156,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const heroSection = document.querySelector('.hero-section');
+    // const heroSection = document.querySelector('.hero-section');
     
-    if (heroSection) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
-            heroSection.style.transform = `translateY(${parallax}px)`;
-        });
-    }
+    // if (heroSection) {
+    //     window.addEventListener('scroll', function() {
+    //         const scrolled = window.pageYOffset;
+    //         const parallax = scrolled * 0.5;
+    //         heroSection.style.transform = `translateY(${parallax}px)`;
+    //     });
+    // }
 
     const counters = document.querySelectorAll('.stat-item h3');
     

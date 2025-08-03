@@ -1,8 +1,9 @@
 import os
 import json
 
-BASE_DIR = '../images-copy'
-OUTPUT_JSON = 'PhotoGallery.json'
+# BASE_DIR = '../images-copy'
+BASE_DIR = '../images/Index-Cover'
+OUTPUT_JSON = 'hero-images.json'
 IMAGE_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.webp')
 
 gallery = {}

@@ -38,6 +38,7 @@ body {
     color: var(--text-dark);
     background-color: var(--white);
     overflow-x: hidden;
+    /* padding-top: 50px; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -165,62 +166,98 @@ img {
     color: var(--text-dark) !important;
 }
 
-/* ===== HERO SECTION ===== */
-/* .hero-section {
-    height: 100vh;
-    background: linear-gradient(rgba(47, 79, 47, 0.4), rgba(47, 79, 47, 0.4)),
-    url('../images/farmhouse-ext-resized.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    position: relative;
-} */
-
+/* === UPDATED HERO SECTION === */
 .hero-section {
-  height: 100vh;
-  background: linear-gradient(rgba(47, 79, 47, 0.4), rgba(47, 79, 47, 0.4)),
-              /* url('../images/poster.webp') center/cover no-repeat; */
-              url('../images/Index-Cover.webp') center/cover no-repeat;
-
-  display: flex;
-  align-items: center;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero-bg.active {
+  opacity: 1;
+  z-index: 0;
+}
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(107, 142, 35, 0.3), rgba(143, 188, 143, 0.3));
-    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)); */
-
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .hero-section .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
+
+
 .hero-section h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section .lead {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons .btn {
-    margin: 0 10px 10px 0;
-    padding: 15px 35px;
-    font-size: 1.1rem;
+  margin: 0 10px 10px 0;
+  padding: 15px 35px;
+  font-size: 1.1rem;
 }
+
+/* === AUTO-SCROLL IMAGE STRIP === */
+.hero-scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#hero-scroll-track {
+  display: inline-flex;
+  animation: scroll-left 30s linear infinite;
+}
+
+#hero-scroll-track img {
+  height: 120px;
+  width: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
 /* ===== SECTIONS ===== */
 .section-title {
@@ -371,7 +408,7 @@ img {
 }
 
 /* ===== PAGE HEADER ===== */
-.page-header {
+/* .page-header {
     background: linear-gradient(135deg, var(--soft-sage), var(--secondary-green));
     padding: 120px 0 80px;
     text-align: center;
@@ -387,7 +424,90 @@ img {
 .page-subtitle {
     font-size: 1.2rem;
     color: var(--text-light);
+} */
+
+:root {
+  --page-header-bg: url('../images/Sunrise/sunrise.webp');
+  --page-header-overlay: rgba(0, 0, 0, 0.4);
+  --page-header-fallback: #6B8E23; /* olive green fallback if image fails */
 }
+
+.page-header {
+  position: relative;
+  background: var(--page-header-fallback);
+  background-image: var(--page-header-bg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* ✅ Important: Use scroll attachment on mobile to avoid bugs */
+  background-attachment: fixed;
+
+  /* ✅ Add min-height to help maintain aspect ratio */
+  min-height: 40vh;
+
+  padding: 160px 0 100px;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+
+.page-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--page-header-overlay);
+  z-index: 1;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.page-title,
+.page-subtitle {
+  color: white;
+}
+
+.page-title {
+  font-size: 3rem;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    background-attachment: scroll;
+    padding: 120px 0 80px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 
 /* ===== ABOUT PAGE STYLES ===== */
 .about-story {
@@ -724,6 +844,24 @@ img {
     padding: 2rem 0;
 }
 
+.footer-contact-link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.footer-contact-link:hover {
+  color: var(--accent-green);
+}
+
+.footer-contact-link i {
+  margin-right: 6px;
+}
+
+
+
+
 .social-links a {
     color: var(--white);
     font-size: 1.2rem;
@@ -910,4 +1048,24 @@ html {
 
 .q-icon {
   font-size: 24px;
+}
+
+/* === NAVBAR TOP INFO BAR === */
+.top-info-bar {
+  background-color: red;
+  color: white;
+  padding: 3px 0;
+  font-size: 0.95rem;
+  font-family: var(--font-secondary);
+  margin-bottom: 10px;
+}
+
+.top-info-bar a {
+  color: white;
+  text-decoration: underline;
+}
+
+.top-info-bar a:hover {
+  color: var(--accent-green);
+  text-decoration: none;
 }
