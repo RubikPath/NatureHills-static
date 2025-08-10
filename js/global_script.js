@@ -11,3 +11,5 @@ function adjustBodyPadding() {
 
 window.addEventListener('load', adjustBodyPadding);
 window.addEventListener('resize', adjustBodyPadding);
+
+document.addEventListener('contextmenu', event => event.preventDefault());

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="images/Logo/NatureHillsFarmsLogo.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -49,8 +50,8 @@
         <!-- Main Nav Container -->
         <div class="container">
             <a class="navbar-brand" href="index.html">
-            <img src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
-            <span class="fw-bold">Nature Hills</span>
+            <img loading="lazy" src="images/Logo/image.png" alt="Logo" style="height: 40px; margin-right: 8px;">
+            <span class="fw-bold">Nature Hills Farms</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -252,7 +253,7 @@
                 card.innerHTML = `
                     <div class="gallery-card">
                     <a href="${path}" data-lightbox="gallery" data-title="${altText}">
-                        <img src="${path}" alt="${altText}" class="img-fluid">
+                        <img loading="lazy" src="${path}" alt="${altText}" class="img-fluid">
                         <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                         </div>
@@ -264,9 +265,8 @@
                 });
             }
 
-            console.log('✅ Gallery images loaded.');
+            console.log(' Gallery images loaded.');
 
-            // ✅ ✅ ✅ Now attach the filtering logic:
             const buttons = document.querySelectorAll('.filter-buttons button');
 
             buttons.forEach(button => {
@@ -289,12 +289,13 @@
             });
 
             } catch (error) {
-            console.error('❌ Gallery load error:', error.message);
+            console.error(' Gallery load error:', error.message);
             grid.innerHTML = `<p style="color: red;">Unable to load gallery. Please try again later.</p>`;
             }
         })();
     </script>
-
-
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
 </body>
 </html>
