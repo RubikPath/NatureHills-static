@@ -50,3 +50,58 @@
 }
 
 
+
+
+
+.mission-card {
+    position: relative;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.mission-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* darker for contrast */
+    z-index: 0;
+    transition: background 0.3s ease;
+}
+
+.mission-card h4 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary-green); /* heading in green */
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-card p {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white); /* force white text */
+  position: relative;
+  z-index: 1;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    filter: brightness(1.2);
+}
+
+.mission-card:hover::before {
+    background: rgba(0, 0, 0, 0.4); /* slightly lighter on hover */
+}
