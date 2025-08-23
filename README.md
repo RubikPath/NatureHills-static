@@ -1,4 +1,4 @@
-# Nature Hills Farmhouse Website
+# Nature Hills Farms - Panshet Website
 
 A professional, responsive static website for a farmhouse business offering staycation services, garden experiences, and farm-fresh meals.
 
@@ -191,7 +191,7 @@ This website template is provided as-is for the farmhouse business. Feel free to
 
 ---
 
-**Built with ❤️ for Nature Hills Farmhouse**
+**Built with ❤️ for Nature Hills Farms - Panshet**
 
 *Last updated: December 2025*
 

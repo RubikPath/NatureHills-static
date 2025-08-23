@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // console.log('%c🌿 Welcome to Nature Hills Farmhouse! 🌿', 'color: #6B8E23; font-size: 16px; font-weight: bold;');
+    // console.log('%c🌿 Welcome to Nature Hills Farms - Panshet! 🌿', 'color: #6B8E23; font-size: 16px; font-weight: bold;');
     // console.log('%cEnjoy exploring our beautiful farm website!', 'color: #8FBC8F; font-size: 14px;');
 });
 

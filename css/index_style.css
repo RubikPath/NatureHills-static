@@ -99,3 +99,37 @@
 .activities-gallery a:hover img {
   transform: scale(1.05);
 }
+
+
+
+
+.service-card {
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* ensures text stays at bottom */
+    min-height: 250px; /* adjust card height */
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.service-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* darkens image for text readability */
+    z-index: 1;
+}
+
+.service-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-content h4,
+.service-content p {
+    color: #fff; /* white text for contrast */
+}
